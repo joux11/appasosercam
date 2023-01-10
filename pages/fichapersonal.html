@@ -204,9 +204,9 @@
                 
                 
             </div>
-            <div class="row">
+            <div class="row" style="padding-top: 15px;">
                 <div class="col-lg-12">
-                    <div class="panel panel-green">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             Datos Personales
                         </div>
@@ -217,7 +217,7 @@
                                     <img id="myimage" src="" alt="" width="120px" height="160px">
                                     <br>
                                     <br>
-                                    <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal" formnovalidate="formnovalidate">
+                                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" formnovalidate="formnovalidate">
                                         Subir Foto
                                     </button>
                                     <!--MODAL PARA LA FOTO-->
@@ -321,7 +321,7 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <label for="">Fecha de Nacimiento:</label>
-                                            <div class="input-group date" data-date-format="dd.mm.yyyy">
+                                            <div class="input-group date" id="datepicker1" data-date-format="dd.mm.yyyy">
                                                 <input  type="text" class="form-control" placeholder="dd.mm.yyyy">
                                                 <div class="input-group-addon" >
                                                   <span class="glyphicon glyphicon-th"></span>
@@ -359,7 +359,7 @@
                         </div>
                         <!-- /.panel-body -->
                     </div>
-                    <div class="panel panel-green">
+                    <div class="panel panel-primary">
                         <div class="panel panel-heading">Datos de Nacimiento</div>
                         <div class="panel-body">
                             <div class="row">
@@ -371,8 +371,46 @@
                                         </select>
                                     </div>
                                     <div class="col-lg-5">
+                                        <input id="provinciaN" name="provinciaN" type="hidden" value="PASTAZA">
+                                        <label>*Provincia de Nacimiento:</label>
+                                        <select class="form-control" data-val="true" data-val-required="Seleccione la provincia de nacimiento" id="idprovinciaN" name="idprovinciaN">
+                                            <option value="">--SELECCIONE PROVINCIA--</option>
+                                            <option value="01">AZUAY</option>
+                                            <option value="02">BOLIVAR</option>
+                                            <option value="03">CAÑAR</option>
+                                            <option value="04">CARCHI</option>
+                                            <option value="06">CHIMBORAZO</option>
+                                            <option value="05">COTOPAXI</option>
+                                            <option value="07">EL ORO</option>
+                                            <option value="08">ESMERALDAS</option>
+                                            <option value="20">GALAPAGOS</option>
+                                            <option value="09">GUAYAS</option>
+                                            <option value="10">IMBABURA</option>
+                                            <option value="11">LOJA</option>
+                                            <option value="12">LOS RÍOS</option>
+                                            <option value="13">MANABÍ</option>
+                                            <option value="14">MORONA SANTIAGO</option>
+                                            <option value="15">NAPO</option>
+                                            <option value="22">ORELLANA</option>
+                                            <option value="16">PASTAZA</option>
+                                            <option value="17">PICHINCHA</option>
+                                            <option value="24">SANTA ELENA</option>
+                                            <option value="23">SANTO DOMINGO DE LOS TSACHILAS</option>
+                                            <option value="21">SUCUMBÍOS</option>
+                                            <option value="18">TUNGURAHUA</option>
+                                            <option value="19">ZAMORA CHINCHIPE</option>
+                                        </select>
+                                        <span class="field-validation-valid" data-valmsg-for="idprovinciaN" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="col-lg-5">
                                         <label for="">Ciudad de Nacimiento:</label>
                                         <select name="ciudadnacimiento" id="ciudadnacimiento" class="form-control">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <label for="parroquianacimiento">*Parroquia de Nacimiento</label>
+                                        <select name="parroquianacimiento" id="parroquianacimiento" class="form-control">
                                             <option value=""></option>
                                         </select>
                                     </div>
@@ -412,7 +450,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
     
-    <script >$('.input-group.date').datepicker({format: "dd.mm.yyyy"}); </script>
+    <script >$('#datepicker1').datepicker({format: "dd.mm.yyyy"}); </script>
 
     
 </body>
